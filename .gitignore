@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js & Build outputs
+.next/
+out/
+dist/
+
+# Logs & Environment
+*.log
+.DS_Store
+.env*
+!.env.example
+
+# Firebase cache
+.firebase/
+
+# Local reference & legacy backups
+legacy_nextjs/
+reference/
+qa/
