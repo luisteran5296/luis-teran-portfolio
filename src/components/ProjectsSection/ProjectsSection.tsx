@@ -8,7 +8,7 @@ export const ProjectsSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="w-full max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-20 overflow-hidden">
+    <section id="projects" className="w-full max-w-7xl mx-auto px-4 sm:px-6 pt-6 md:pt-8 pb-16 overflow-hidden">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 35 }}

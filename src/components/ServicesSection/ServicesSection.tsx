@@ -15,7 +15,7 @@ export const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="max-w-7xl mx-auto px-6 pt-20 pb-4">
+    <section id="services" className="max-w-7xl mx-auto px-6 pt-20 pb-8 md:pb-12">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -252,7 +252,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     },
     enterpriseAgents: {
       eyebrow: "Sistemas en Producción",
-      title: "Agentes de IA Empresariales",
+      title: "Agentes de IA para Microsoft Teams",
       subtitle:
         "Agentes conversacionales y multimodales diseñados para Microsoft Teams, conectando modelos fundacionales (Google Gemini) con herramientas empresariales críticas (Atlassian Confluence, Google Analytics, Excel y auditoría de pólizas).",
       watchDemo: "Ver Demo en Video",
@@ -261,7 +261,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
       items: [
         {
           id: "teams-confluence-agent",
-          title: "Teams Confluence Assistant",
+          title: "Microsoft Teams Confluence Assistant",
           badge: "Enterprise Knowledge AI",
           subtitle: "Asistente con citas grounded y Function Calling para documentación corporativa",
           description:
@@ -278,7 +278,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
         {
           id: "teams-analytics-excel-agent",
-          title: "Teams Analytics & Excel Agent",
+          title: "Microsoft Teams Analytics & Excel Agent",
           badge: "Conversational BI & Automation",
           subtitle: "BI conversacional conectado a Google Analytics 4 y generación de reportes Excel",
           description:
@@ -295,7 +295,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
         {
           id: "teams-expense-auditor-agent",
-          title: "Teams Multi-Agent Expense Auditor",
+          title: "Microsoft Teams Multi-Agent Expense Auditor",
           badge: "Multimodal Vision & HITL",
           subtitle: "Auditoría de facturas con visión artificial y flujo de aprobación Human-in-the-Loop",
           description:
@@ -315,7 +315,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     projects: {
       eyebrow: "Portafolio de Productos",
       titlePre: "",
-      titleHighlight: "Productos IA",
+      titleHighlight: "Productos IA Desarrollados",
       subtitle:
         "Cinco plataformas de inteligencia artificial construidas de forma independiente: arquitectura, pipelines de datos, orquestación de modelos y despliegue en la nube.",
       cta: "Explorar Productos",
@@ -329,7 +329,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Reconoce equipamiento de gimnasio disponible mediante visión por computadora y genera planes de entrenamiento adaptados usando Gemini 2.5 y Genkit en GCP.",
           link: "https://gymgineer.com/",
-          image: "/projects/gymgineer-hero.png",
+          image: "/projects/gymgineer-art.jpg",
           gridClass: "md:col-span-7 h-[430px]",
           tags: ["Gemini 2.5", "Genkit", "Computer Vision", "GCP"],
           kicker: "Producto 01",
@@ -342,7 +342,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Estudio web de texto a voz con más de 450 voces para crear locuciones expresivas configurables por acento, emoción, ritmo y tono con exportación de audio.",
           link: "https://voxify.ai/features",
-          image: "/projects/voxify-hero.png",
+          image: "/projects/voxify-art.jpg",
           gridClass: "md:col-span-5 h-[430px]",
           tags: ["TTS", "450+ Voces", "Audio AI", "Cloud Hosting"],
           kicker: "Producto 02",
@@ -355,7 +355,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Convierte guiones en videos narrados para Reels y Shorts con selección automatizada de material visual, voces en español y edición interactiva.",
           link: "https://genovideo.com/features",
-          image: "/projects/genovideo-hero.png",
+          image: "/projects/genovideo-art.jpg",
           gridClass: "md:col-span-5 h-[400px]",
           tags: ["Video Gen", "Reels & Shorts", "Media Pipelines", "Cloud Run"],
           kicker: "Producto 03",
@@ -368,7 +368,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Investiga fuentes de actualidad, redacta ediciones en la voz de marca y automatiza la programación y envío con dashboard de analítica de audiencia.",
           link: "https://inkredo.com/",
-          image: "/projects/inkredo-hero.png",
+          image: "/projects/inkredo-art.jpg",
           gridClass: "md:col-span-7 h-[400px]",
           tags: ["LLM Agents", "Brand Voice", "Automation", "Newsletters"],
           kicker: "Producto 04",
@@ -381,7 +381,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Herramienta no-code que procesa archivos CSV y Excel con reseñas y encuestas para identificar temas recurrentes, sentimiento y patrones estadísticos.",
           link: "https://opinizoom.com/",
-          image: "/projects/opinizoom-hero.png",
+          image: "/projects/opinizoom-art.jpg",
           gridClass: "md:col-span-12 h-[380px]",
           tags: ["NLP", "Sentiment Analysis", "CSV / Excel", "Text Mining"],
           kicker: "Producto 05",
@@ -618,16 +618,16 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     },
     enterpriseAgents: {
       eyebrow: "Production Systems",
-      title: "Enterprise AI Agents",
+      title: "Microsoft Teams Enterprise AI Agents",
       subtitle:
-        "Conversational and multimodal agents engineered for Microsoft Teams, connecting frontier models (Google Gemini) with mission-critical enterprise workflows (Atlassian Confluence, Google Analytics, Excel, and corporate policy auditing).",
+        "Conversational and multimodal agents engineered specifically for Microsoft Teams, connecting frontier models (Google Gemini) with mission-critical enterprise workflows (Atlassian Confluence, Google Analytics, Excel, and corporate policy auditing).",
       watchDemo: "Watch Video Demo",
       viewCode: "View Repository",
       modalTitle: "Video Demonstration",
       items: [
         {
           id: "teams-confluence-agent",
-          title: "Teams Confluence Assistant",
+          title: "Microsoft Teams Confluence Assistant",
           badge: "Enterprise Knowledge AI",
           subtitle: "Grounded assistant with citation verification and Function Calling for enterprise docs",
           description:
@@ -644,7 +644,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
         {
           id: "teams-analytics-excel-agent",
-          title: "Teams Analytics & Excel Agent",
+          title: "Microsoft Teams Analytics & Excel Agent",
           badge: "Conversational BI & Automation",
           subtitle: "Conversational BI powered by GA4 and automated executive Excel report generation",
           description:
@@ -661,7 +661,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
         {
           id: "teams-expense-auditor-agent",
-          title: "Teams Multi-Agent Expense Auditor",
+          title: "Microsoft Teams Multi-Agent Expense Auditor",
           badge: "Multimodal Vision & HITL",
           subtitle: "Invoice auditing with multimodal vision AI and Human-in-the-Loop manager approval",
           description:
@@ -681,7 +681,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     projects: {
       eyebrow: "Product Portfolio",
       titlePre: "",
-      titleHighlight: "AI Products",
+      titleHighlight: "Productos IA Desarrollados",
       subtitle:
         "Five independent AI platforms engineered end-to-end: system architecture, database modeling, data pipelines, model integration, and cloud hosting.",
       cta: "Explore Products",
@@ -695,7 +695,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "A mobile AI trainer that recognizes gym equipment through computer vision and generates tailored workouts based on available machines and history using Gemini 2.5 and Genkit.",
           link: "https://gymgineer.com/",
-          image: "/projects/gymgineer-hero.png",
+          image: "/projects/gymgineer-art.jpg",
           gridClass: "md:col-span-7 h-[430px]",
           tags: ["Gemini 2.5", "Genkit", "Computer Vision", "GCP"],
           kicker: "Product 01",
@@ -708,7 +708,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Web-based text-to-speech studio with 450+ voices allowing fine-tuned controls over emotion, accent, pace, tone, and multi-segment exporting.",
           link: "https://voxify.ai/features",
-          image: "/projects/voxify-hero.png",
+          image: "/projects/voxify-art.jpg",
           gridClass: "md:col-span-5 h-[430px]",
           tags: ["TTS", "450+ Voices", "Audio AI", "Cloud Hosting"],
           kicker: "Product 02",
@@ -721,7 +721,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Generates ready-to-publish social videos from text scripts with automated visual curation, synthetic Spanish voices, and interactive editing.",
           link: "https://genovideo.com/features",
-          image: "/projects/genovideo-hero.png",
+          image: "/projects/genovideo-art.jpg",
           gridClass: "md:col-span-5 h-[400px]",
           tags: ["Video Gen", "Reels & Shorts", "Media Pipelines", "Cloud Run"],
           kicker: "Product 03",
@@ -734,7 +734,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Researches trending industry topics, drafts full issues in distinct brand voices, and automates scheduling and audience delivery with analytics.",
           link: "https://inkredo.com/",
-          image: "/projects/inkredo-hero.png",
+          image: "/projects/inkredo-art.jpg",
           gridClass: "md:col-span-7 h-[400px]",
           tags: ["LLM Agents", "Brand Voice", "Automation", "Newsletters"],
           kicker: "Product 04",
@@ -747,7 +747,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           description:
             "Extracts key themes, sentiment distributions, and statistical insights from CSV and Excel survey or customer review files without writing code.",
           link: "https://opinizoom.com/",
-          image: "/projects/opinizoom-hero.png",
+          image: "/projects/opinizoom-art.jpg",
           gridClass: "md:col-span-12 h-[380px]",
           tags: ["NLP", "Sentiment Analysis", "CSV / Excel", "Text Mining"],
           kicker: "Product 05",

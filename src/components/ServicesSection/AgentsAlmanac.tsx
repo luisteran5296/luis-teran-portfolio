@@ -8,7 +8,7 @@ import type { EnterpriseAgentItem } from "../../data/portfolioData";
 const S = {
   baseVh: 8,          // floor: never pin a card higher than this
   peekPx: 38,         // vertical offset per card -> peek above the next
-  gapVh: 6,           // tight, snappy scroll length (vh) between cards
+  gapVh: 10,          // balanced, comfortable scroll length between cards
   revealPx: 260,      // distance over which an incoming card eases
   revealAt: 0.35,     // reveal card once 35% on screen
   persp: 1500,        // 3D perspective
@@ -245,8 +245,8 @@ export const AgentsAlmanac: React.FC = () => {
 
                   {/* Centered Glowing Play Action Trigger */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
-                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-[0_0_30px_rgba(139,92,246,0.6)] group-hover/cover:scale-115 group-hover/cover:shadow-[0_0_40px_rgba(139,92,246,0.9)] transition-all duration-300 mb-3">
-                      <Play className="w-7 h-7 fill-current ml-1" />
+                    <div className="w-16 h-16 rounded-full bg-black/85 hover:bg-black text-white flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.8)] border border-white/20 group-hover/cover:scale-115 group-hover/cover:border-white/40 transition-all duration-300 mb-3">
+                      <Play className="w-7 h-7 fill-white text-white ml-1" />
                     </div>
                     <span className="text-xs font-bold text-white tracking-wide uppercase font-mono drop-shadow-md">
                       {t.enterpriseAgents.watchDemo}
@@ -310,13 +310,13 @@ export const AgentsAlmanac: React.FC = () => {
                   </div>
 
                   {/* Card Foot Actions */}
-                  <div className="card__foot mt-5 pt-3 border-t border-border/50">
+                  <div className="card__foot mt-5 pt-3 border-t border-border/50 flex items-center justify-between">
                     <button
                       type="button"
                       onClick={() => setSelectedAgent(agent)}
-                      className="card__visit-btn"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-black hover:bg-neutral-800 shadow-md shadow-black/20 hover:shadow-lg hover:shadow-black/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer border border-neutral-800 dark:border-neutral-700"
                     >
-                      <Play className="w-3.5 h-3.5 fill-current" />
+                      <Play className="w-3 h-3 fill-white text-white shrink-0" />
                       <span>{t.enterpriseAgents.watchDemo}</span>
                     </button>
 
@@ -324,7 +324,7 @@ export const AgentsAlmanac: React.FC = () => {
                       href={agent.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-primary transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-lg hover:bg-muted/50"
                     >
                       <span>GitHub</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -364,7 +364,7 @@ export const AgentsAlmanac: React.FC = () => {
           position: relative;
           width: min(1040px, 92vw);
           margin: 0 auto;
-          padding-bottom: 24px;
+          padding-bottom: clamp(60px, 10vh, 90px);
         }
 
         .almanac-card {
@@ -532,26 +532,6 @@ export const AgentsAlmanac: React.FC = () => {
           align-items: center;
           justify-content: space-between;
           gap: 12px;
-        }
-
-        .card__visit-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 7px;
-          padding: 8px 18px;
-          border-radius: 999px;
-          font-size: 12px;
-          font-weight: 700;
-          color: #ffffff;
-          background: var(--accent);
-          box-shadow: 0 4px 14px -3px rgba(139, 92, 246, 0.5);
-          transition: transform 0.2s ease, filter 0.2s ease;
-          cursor: pointer;
-        }
-
-        .card__visit-btn:hover {
-          transform: translateY(-2px);
-          filter: brightness(1.1);
         }
 
         /* Responsive */
