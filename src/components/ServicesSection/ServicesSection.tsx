@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Cpu, Brain, Cloud, Layout } from "lucide-react";
 import { MagicCard } from "../lightswind/magic-card";
 import { useLanguage } from "../../context/LanguageContext";
+import { EnterpriseAgentsShowcase } from "./EnterpriseAgentsShowcase";
 
 export const ServicesSection = () => {
   const { t } = useLanguage();
@@ -70,6 +71,9 @@ export const ServicesSection = () => {
           );
         })}
       </div>
+
+      {/* Enterprise AI Agents in Production */}
+      <EnterpriseAgentsShowcase />
     </section>
   );
 };

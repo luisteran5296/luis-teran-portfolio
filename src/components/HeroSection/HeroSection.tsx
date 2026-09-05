@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, Linkedin, Github } from "lucide-react";
+import { ArrowRight, Mail, Phone, Linkedin, Github, FileText } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 import { Button } from "../lightswind/button";
 import { Badge } from "../lightswind/badge";
@@ -111,6 +111,14 @@ export const HeroSection = () => {
               className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10 cursor-pointer"
             >
               {t.hero.contactBtn} <Mail className="w-4 h-4" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="ghost" 
+              onClick={() => scrollToSection("career")}
+              className="rounded-full px-6 h-12 text-foreground/80 hover:text-foreground hover:bg-foreground/5 font-semibold flex items-center gap-2 transition-all hover:-translate-y-1 cursor-pointer"
+            >
+              <FileText className="w-4 h-4 text-primary" /> {t.hero.downloadCv}
             </Button>
           </motion.div>
 

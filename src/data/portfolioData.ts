@@ -36,6 +36,19 @@ export interface ServiceItem {
   iconName: string;
 }
 
+export interface EnterpriseAgentItem {
+  id: string;
+  title: string;
+  badge: string;
+  subtitle: string;
+  description: string;
+  highlights: string[];
+  tags: string[];
+  repoUrl: string;
+  videoUrl: string;
+  videoDuration: string;
+}
+
 export interface PortfolioContent {
   locale: Locale;
   socials: {
@@ -83,6 +96,15 @@ export interface PortfolioContent {
     title: string;
     subtitle: string;
     items: ServiceItem[];
+  };
+  enterpriseAgents: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    watchDemo: string;
+    viewCode: string;
+    modalTitle: string;
+    items: EnterpriseAgentItem[];
   };
   projects: {
     eyebrow: string;
@@ -228,6 +250,68 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
       ],
     },
+    enterpriseAgents: {
+      eyebrow: "Sistemas en Producción",
+      title: "Agentes de IA Empresariales",
+      subtitle:
+        "Agentes conversacionales y multimodales diseñados para Microsoft Teams, conectando modelos fundacionales (Google Gemini) con herramientas empresariales críticas (Atlassian Confluence, Google Analytics, Excel y auditoría de pólizas).",
+      watchDemo: "Ver Demo en Video",
+      viewCode: "Ver Repositorio",
+      modalTitle: "Demostración en Video",
+      items: [
+        {
+          id: "teams-confluence-agent",
+          title: "Teams Confluence Assistant",
+          badge: "Enterprise Knowledge AI",
+          subtitle: "Asistente con citas grounded y Function Calling para documentación corporativa",
+          description:
+            "Agente autónomo para Microsoft Teams inspirado en Microsoft Build 2026. Orquesta Google Gemini 2.5 Flash con Function Calling nativo y la API REST v2 de Confluence Cloud mediante CQL dinámico, respondiendo con citas verificadas y enlaces directos en Adaptive Cards.",
+          highlights: [
+            "Búsqueda semántica con Confluence Query Language (CQL) dinámico",
+            "Limpieza profunda de storage XML a Markdown con BeautifulSoup4",
+            "Tarjetas interactivas Adaptive Cards en hilos de chats y canales Teams",
+          ],
+          tags: ["Python 3.12", "FastAPI", "Gemini 2.5 Flash", "Atlassian REST v2", "Teams SDK", "Adaptive Cards"],
+          repoUrl: "https://github.com/luisteran5296/teams-confluence-agent",
+          videoUrl: "https://github.com/user-attachments/assets/7bb250e4-5e26-4c31-ac81-a2ac4749e880",
+          videoDuration: "1:15 min",
+        },
+        {
+          id: "teams-analytics-excel-agent",
+          title: "Teams Analytics & Excel Agent",
+          badge: "Conversational BI & Automation",
+          subtitle: "BI conversacional conectado a Google Analytics 4 y generación de reportes Excel",
+          description:
+            "Automatiza el análisis de tráfico y finanzas en Microsoft Teams. Permite consultas en lenguaje natural a la API de GA4 y genera hojas de cálculo ejecutivas formateadas profesionalmente con openpyxl en menos de 60 segundos.",
+          highlights: [
+            "Conexión directa a Google Analytics Data API v1beta (GA4)",
+            "Generación automática de libros de cálculo con estilos ejecutivos",
+            "Formulario interactivo nativo de filtros por fecha y métricas en Teams",
+          ],
+          tags: ["Python 3.12", "GA4 API", "Gemini 2.5 Flash", "openpyxl", "Azure Bot", "Teams SDK"],
+          repoUrl: "https://github.com/luisteran5296/teams-analytics-excel-agent",
+          videoUrl: "https://github.com/user-attachments/assets/8cc50f51-ba29-4a7a-9705-c70888a91034",
+          videoDuration: "1:30 min",
+        },
+        {
+          id: "teams-expense-auditor-agent",
+          title: "Teams Multi-Agent Expense Auditor",
+          badge: "Multimodal Vision & HITL",
+          subtitle: "Auditoría de facturas con visión artificial y flujo de aprobación Human-in-the-Loop",
+          description:
+            "Sistema multi-agente para fiscalización de gastos corporativos. Recibe recibos o PDFs en Teams, extrae líneas detalladas con Gemini 2.5 Vision sin necesidad de OCR tradicional, evalúa cumplimiento de políticas (límites y restricciones) y envía tarjetas de aprobación a directores.",
+          highlights: [
+            "Extracción estructurada Zero-OCR con Gemini 2.5 Vision",
+            "Motor de scoring de riesgo y detección de compras no permitidas",
+            "Flujo interactivo HITL con acciones de Aprobación, Rechazo y Clarificación",
+          ],
+          tags: ["Python 3.12", "Gemini 2.5 Vision", "Policy Auditor", "Adaptive Cards", "HITL", "Excel Ledger"],
+          repoUrl: "https://github.com/luisteran5296/teams-expense-auditor-agent",
+          videoUrl: "https://github.com/user-attachments/assets/afe8096b-92ad-4eee-8896-97883e131aa7",
+          videoDuration: "1:45 min",
+        },
+      ],
+    },
     projects: {
       eyebrow: "Portafolio de Productos",
       titlePre: "",
@@ -365,7 +449,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "IBM",
           year: "2020",
           badge: "Certificación Oficial IBM",
-          credentialUrl: "https://shorturl.at/lDJ08",
+          credentialUrl: "https://www.youracclaim.com/users/luis-angel-teran-miranda/",
           details: [
             "Especialización en herramientas de ciencia de datos: Python, SQL, visualización y análisis exploratorio",
             "Modelos supervisados y no supervisados con Scikit-Learn aplicados a casos de negocio reales",
@@ -377,7 +461,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "Johns Hopkins University (Coursera)",
           year: "2019 – 2020",
           badge: "Especialización Coursera",
-          credentialUrl: "https://shorturl.at/awDMN",
+          credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/certificate/QSDM7CAKMSNE",
           details: [
             "Inferencia estadística, análisis de regresión y diseño de experimentos analíticos",
             "Desarrollo de productos de datos reproducibles y dashboards interactivos",
@@ -532,6 +616,68 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
         },
       ],
     },
+    enterpriseAgents: {
+      eyebrow: "Production Systems",
+      title: "Enterprise AI Agents",
+      subtitle:
+        "Conversational and multimodal agents engineered for Microsoft Teams, connecting frontier models (Google Gemini) with mission-critical enterprise workflows (Atlassian Confluence, Google Analytics, Excel, and corporate policy auditing).",
+      watchDemo: "Watch Video Demo",
+      viewCode: "View Repository",
+      modalTitle: "Video Demonstration",
+      items: [
+        {
+          id: "teams-confluence-agent",
+          title: "Teams Confluence Assistant",
+          badge: "Enterprise Knowledge AI",
+          subtitle: "Grounded assistant with citation verification and Function Calling for enterprise docs",
+          description:
+            "Autonomous agent for Microsoft Teams inspired by Microsoft Build 2026. Orchestrates Google Gemini 2.5 Flash with native Function Calling and Confluence Cloud REST v2 API via dynamic CQL, delivering verified answers with citations directly in Adaptive Cards.",
+          highlights: [
+            "Semantic retrieval via dynamic Confluence Query Language (CQL)",
+            "Deep HTML/storage cleaning into clean Markdown via BeautifulSoup4",
+            "Threaded interactive Adaptive Cards inside Teams chats and channels",
+          ],
+          tags: ["Python 3.12", "FastAPI", "Gemini 2.5 Flash", "Atlassian REST v2", "Teams SDK", "Adaptive Cards"],
+          repoUrl: "https://github.com/luisteran5296/teams-confluence-agent",
+          videoUrl: "https://github.com/user-attachments/assets/7bb250e4-5e26-4c31-ac81-a2ac4749e880",
+          videoDuration: "1:15 min",
+        },
+        {
+          id: "teams-analytics-excel-agent",
+          title: "Teams Analytics & Excel Agent",
+          badge: "Conversational BI & Automation",
+          subtitle: "Conversational BI powered by GA4 and automated executive Excel report generation",
+          description:
+            "Automates business intelligence inside Microsoft Teams. Translates natural language questions into Google Analytics 4 API queries and delivers professionally formatted executive Excel spreadsheets with openpyxl in under 60 seconds.",
+          highlights: [
+            "Direct integration with Google Analytics Data API v1beta (GA4)",
+            "Automated Excel spreadsheet generation with corporate formatting",
+            "Native interactive date-picker and metric filtering forms in Teams",
+          ],
+          tags: ["Python 3.12", "GA4 API", "Gemini 2.5 Flash", "openpyxl", "Azure Bot", "Teams SDK"],
+          repoUrl: "https://github.com/luisteran5296/teams-analytics-excel-agent",
+          videoUrl: "https://github.com/user-attachments/assets/8cc50f51-ba29-4a7a-9705-c70888a91034",
+          videoDuration: "1:30 min",
+        },
+        {
+          id: "teams-expense-auditor-agent",
+          title: "Teams Multi-Agent Expense Auditor",
+          badge: "Multimodal Vision & HITL",
+          subtitle: "Invoice auditing with multimodal vision AI and Human-in-the-Loop manager approval",
+          description:
+            "Multi-agent architecture for corporate financial auditing. Employees drop receipt images or PDFs in Teams; the vision agent extracts itemized lines without traditional OCR, assesses company policy rules, and delivers an interactive approval card to managers.",
+          highlights: [
+            "Zero-OCR structured extraction using Gemini 2.5 Vision",
+            "Automated risk scoring and restricted purchase policy validation",
+            "Interactive HITL approval workflow with Approve, Reject, and Clarify actions",
+          ],
+          tags: ["Python 3.12", "Gemini 2.5 Vision", "Policy Auditor", "Adaptive Cards", "HITL", "Excel Ledger"],
+          repoUrl: "https://github.com/luisteran5296/teams-expense-auditor-agent",
+          videoUrl: "https://github.com/user-attachments/assets/afe8096b-92ad-4eee-8896-97883e131aa7",
+          videoDuration: "1:45 min",
+        },
+      ],
+    },
     projects: {
       eyebrow: "Product Portfolio",
       titlePre: "",
@@ -669,7 +815,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "IBM",
           year: "2020",
           badge: "Official IBM Certificate",
-          credentialUrl: "https://shorturl.at/lDJ08",
+          credentialUrl: "https://www.youracclaim.com/users/luis-angel-teran-miranda/",
           details: [
             "Comprehensive data science toolkit: Python, SQL, data visualization, and exploratory analysis",
             "Supervised and unsupervised models with Scikit-Learn applied to practical business use cases",
@@ -681,7 +827,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "Johns Hopkins University (Coursera)",
           year: "2019 – 2020",
           badge: "Coursera Specialization",
-          credentialUrl: "https://shorturl.at/awDMN",
+          credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/certificate/QSDM7CAKMSNE",
           details: [
             "Statistical inference, regression modeling, and analytical experiment design",
             "Building reproducible data products and interactive web analytical apps",
