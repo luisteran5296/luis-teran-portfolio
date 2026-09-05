@@ -8,7 +8,7 @@ import type { EnterpriseAgentItem } from "../../data/portfolioData";
 const S = {
   baseVh: 8,          // floor: never pin a card higher than this
   peekPx: 38,         // vertical offset per card -> peek above the next
-  gapVh: 18,          // tight scroll length (vh) between cards
+  gapVh: 6,           // tight, snappy scroll length (vh) between cards
   revealPx: 260,      // distance over which an incoming card eases
   revealAt: 0.35,     // reveal card once 35% on screen
   persp: 1500,        // 3D perspective
@@ -150,7 +150,7 @@ export const AgentsAlmanac: React.FC = () => {
   }, [N]);
 
   return (
-    <div ref={sectionRef as any} className="agents-almanac-root w-full py-16">
+    <div ref={sectionRef as any} className="agents-almanac-root w-full pt-4 pb-0">
       {/* Section Header */}
       <div className="almanac-head max-w-4xl mx-auto px-6 mb-16 text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/25 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
@@ -364,7 +364,7 @@ export const AgentsAlmanac: React.FC = () => {
           position: relative;
           width: min(1040px, 92vw);
           margin: 0 auto;
-          padding-bottom: calc(var(--count, 3) * 18vh);
+          padding-bottom: 24px;
         }
 
         .almanac-card {
@@ -382,7 +382,7 @@ export const AgentsAlmanac: React.FC = () => {
           transform-origin: 50% 0;
           overflow: hidden;
           transition: border-color 0.3s ease, box-shadow 0.3s ease;
-          margin-bottom: 24px;
+          margin-bottom: 8px;
         }
 
         .almanac-card:hover, .almanac-card.-current {
