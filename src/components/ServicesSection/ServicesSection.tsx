@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Cpu, Brain, Cloud, Layout } from "lucide-react";
 import { MagicCard } from "../lightswind/magic-card";
 import { useLanguage } from "../../context/LanguageContext";
-import { EnterpriseAgentsShowcase } from "./EnterpriseAgentsShowcase";
+import { AgentsAlmanac } from "./AgentsAlmanac";
 
 export const ServicesSection = () => {
   const { t } = useLanguage();
@@ -34,7 +34,7 @@ export const ServicesSection = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
         {t.services.items.map((service, i) => {
           const Icon = iconMap[service.iconName] || Cpu;
           return (
@@ -72,8 +72,8 @@ export const ServicesSection = () => {
         })}
       </div>
 
-      {/* Enterprise AI Agents in Production */}
-      <EnterpriseAgentsShowcase />
+      {/* Flagship Enterprise AI Agents: Cards Almanac Sticky Stack */}
+      <AgentsAlmanac />
     </section>
   );
 };
