@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
+import { Send, MapPin, Mail, Phone, CheckCircle2, Linkedin, Github } from "lucide-react";
 import { Input } from "../lightswind/input";
 import { Textarea } from "../lightswind/textarea";
 import { Button } from "../lightswind/button";
@@ -51,7 +51,7 @@ export const ContactSection = () => {
               </p>
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-4">
               <a 
                 href="mailto:luisteran5296@gmail.com" 
                 className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer group p-3 rounded-2xl hover:bg-foreground/5"
@@ -62,6 +62,36 @@ export const ContactSection = () => {
                 <div>
                   <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider block">Email</span>
                   <span className="font-semibold text-foreground text-sm sm:text-base">luisteran5296@gmail.com</span>
+                </div>
+              </a>
+
+              <a 
+                href={t.socials.linkedin} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer group p-3 rounded-2xl hover:bg-foreground/5"
+              >
+                <div className="w-12 h-12 rounded-2xl glass-panel border border-foreground/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider block">LinkedIn</span>
+                  <span className="font-semibold text-foreground text-sm sm:text-base">in/luis-angel-teran-miranda</span>
+                </div>
+              </a>
+
+              <a 
+                href={t.socials.github} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer group p-3 rounded-2xl hover:bg-foreground/5"
+              >
+                <div className="w-12 h-12 rounded-2xl glass-panel border border-foreground/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+                  <Github className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider block">GitHub</span>
+                  <span className="font-semibold text-foreground text-sm sm:text-base">github.com/luisteran5296</span>
                 </div>
               </a>
 
