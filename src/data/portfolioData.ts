@@ -21,6 +21,28 @@ export interface CareerItem {
   skills: string[];
 }
 
+export interface CredlyBadgeItem {
+  id: string;
+  title: string;
+  issuer: string;
+  issuerBadge: string;
+  badgeId: string;
+  publicUrl: string;
+  badgeImage: string;
+  theme: {
+    border: string;
+    borderHover: string;
+    glow: string;
+    badge: string;
+    accent: string;
+    gradientFrom: string;
+    gradientTo: string;
+  };
+  skills: string[];
+  summary: string;
+  highlights: string[];
+}
+
 export interface EducationItem {
   degree: string;
   school: string;
@@ -28,6 +50,9 @@ export interface EducationItem {
   badge: string;
   details: string[];
   credentialUrl?: string;
+  image?: string;
+  badgeColor?: string;
+  credlyBadgeId?: string;
 }
 
 export interface ServiceItem {
@@ -429,7 +454,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     education: {
       titlePre: "Formación",
       titleHighlight: "Académica & Certificaciones",
-      subtitle: "Bases cuantitativas sólidas y certificaciones profesionales oficiales verificables.",
+      subtitle: "Bases cuantitativas sólidas en ingeniería y certificaciones de élite de la industria verificables en tiempo real.",
       viewCredential: "Ver Credencial ↗",
       items: [
         {
@@ -437,6 +462,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "Universidad Nacional Autónoma de México (UNAM)",
           year: "2015 – 2020",
           badge: "Facultad de Ingeniería",
+          badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
           credentialUrl: "https://www.ingenieria.unam.mx/",
           details: [
             "Fuerte formación cuantitativa en física matemática, métodos numéricos y modelos inversos",
@@ -445,11 +471,44 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           ],
         },
         {
+          degree: "AWS Certified AI Practitioner",
+          school: "Amazon Web Services (AWS)",
+          year: "2024",
+          badge: "Certificación Oficial AWS",
+          badgeColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+          image: "https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/linkedin_thumb_image.png",
+          credentialUrl: "https://www.credly.com/badges/d19e6433-cad0-4f30-af62-41ab1a9998d2/public_url",
+          credlyBadgeId: "d19e6433-cad0-4f30-af62-41ab1a9998d2",
+          details: [
+            "IA Generativa, modelos fundacionales y orquestación con Amazon Bedrock",
+            "Arquitectura de soluciones de machine learning sobre la infraestructura cloud de AWS",
+            "Marcos de IA responsable, gobernanza, seguridad y optimización de latencia/costo",
+          ],
+        },
+        {
+          degree: "Deep Learning Specialization",
+          school: "DeepLearning.AI · Coursera (Andrew Ng)",
+          year: "2023",
+          badge: "Especialización Coursera",
+          badgeColor: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30",
+          image: "https://images.credly.com/images/dfcd0d51-de72-4e1c-8f8c-11dad7711124/linkedin_thumb_image.png",
+          credentialUrl: "https://www.credly.com/badges/4f09f235-ce0d-4e89-9e0c-77ddd742c089/public_url",
+          credlyBadgeId: "4f09f235-ce0d-4e89-9e0c-77ddd742c089",
+          details: [
+            "Redes Neuronales Convolucionales (CNNs), Recurrentes (RNNs) y Transformers",
+            "Técnicas avanzadas de optimización, regularización y afinación de hiperparámetros",
+            "Modelos de lenguaje, visión artificial y procesamiento de secuencias con TensorFlow",
+          ],
+        },
+        {
           degree: "Data Science Professional Certificate",
           school: "IBM",
           year: "2020",
           badge: "Certificación Oficial IBM",
+          badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/30",
+          image: "https://images.credly.com/images/60f2e1e1-1b74-4dc0-a24b-cd08b460c12d/linkedin_thumb_Applied_Data_Science_Capstone.png",
           credentialUrl: "https://www.youracclaim.com/users/luis-angel-teran-miranda/",
+          credlyBadgeId: "1a76e827-d37c-4457-ba1e-a52ec51ae79c",
           details: [
             "Especialización en herramientas de ciencia de datos: Python, SQL, visualización y análisis exploratorio",
             "Modelos supervisados y no supervisados con Scikit-Learn aplicados a casos de negocio reales",
@@ -461,6 +520,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "Johns Hopkins University (Coursera)",
           year: "2019 – 2020",
           badge: "Especialización Coursera",
+          badgeColor: "text-blue-400 bg-blue-500/10 border-blue-500/30",
           credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/certificate/QSDM7CAKMSNE",
           details: [
             "Inferencia estadística, análisis de regresión y diseño de experimentos analíticos",
@@ -795,7 +855,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
     education: {
       titlePre: "Academic",
       titleHighlight: "Background & Credentials",
-      subtitle: "Rigorous quantitative foundations paired with verifiable official certifications.",
+      subtitle: "Rigorous quantitative foundations in engineering paired with elite industry credentials verifiable in real-time.",
       viewCredential: "View Credential ↗",
       items: [
         {
@@ -803,6 +863,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "National Autonomous University of Mexico (UNAM)",
           year: "2015 – 2020",
           badge: "Faculty of Engineering",
+          badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
           credentialUrl: "https://www.ingenieria.unam.mx/",
           details: [
             "Strong quantitative basis in mathematical physics, numerical analysis, and inverse problem theory",
@@ -811,11 +872,44 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           ],
         },
         {
+          degree: "AWS Certified AI Practitioner",
+          school: "Amazon Web Services (AWS)",
+          year: "2024",
+          badge: "Official AWS Certificate",
+          badgeColor: "text-amber-400 bg-amber-500/10 border-amber-500/30",
+          image: "https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/linkedin_thumb_image.png",
+          credentialUrl: "https://www.credly.com/badges/d19e6433-cad0-4f30-af62-41ab1a9998d2/public_url",
+          credlyBadgeId: "d19e6433-cad0-4f30-af62-41ab1a9998d2",
+          details: [
+            "Generative AI, foundation models, and multi-modal orchestration with Amazon Bedrock",
+            "Machine learning solution architecture across AWS cloud infrastructure",
+            "Responsible AI, governance, security, and latency/cost optimization",
+          ],
+        },
+        {
+          degree: "Deep Learning Specialization",
+          school: "DeepLearning.AI · Coursera (Andrew Ng)",
+          year: "2023",
+          badge: "Coursera Specialization",
+          badgeColor: "text-indigo-400 bg-indigo-500/10 border-indigo-500/30",
+          image: "https://images.credly.com/images/dfcd0d51-de72-4e1c-8f8c-11dad7711124/linkedin_thumb_image.png",
+          credentialUrl: "https://www.credly.com/badges/4f09f235-ce0d-4e89-9e0c-77ddd742c089/public_url",
+          credlyBadgeId: "4f09f235-ce0d-4e89-9e0c-77ddd742c089",
+          details: [
+            "Convolutional Neural Networks (CNNs), Recurrent Networks (RNNs), and Transformers",
+            "Advanced hyperparameter optimization, regularization, and deep network architecture",
+            "Sequence modeling, computer vision, and NLP pipelines using TensorFlow",
+          ],
+        },
+        {
           degree: "Data Science Professional Certificate",
           school: "IBM",
           year: "2020",
           badge: "Official IBM Certificate",
+          badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/30",
+          image: "https://images.credly.com/images/60f2e1e1-1b74-4dc0-a24b-cd08b460c12d/linkedin_thumb_Applied_Data_Science_Capstone.png",
           credentialUrl: "https://www.youracclaim.com/users/luis-angel-teran-miranda/",
+          credlyBadgeId: "1a76e827-d37c-4457-ba1e-a52ec51ae79c",
           details: [
             "Comprehensive data science toolkit: Python, SQL, data visualization, and exploratory analysis",
             "Supervised and unsupervised models with Scikit-Learn applied to practical business use cases",
@@ -827,6 +921,7 @@ export const portfolioData: Record<Locale, PortfolioContent> = {
           school: "Johns Hopkins University (Coursera)",
           year: "2019 – 2020",
           badge: "Coursera Specialization",
+          badgeColor: "text-blue-400 bg-blue-500/10 border-blue-500/30",
           credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/certificate/QSDM7CAKMSNE",
           details: [
             "Statistical inference, regression modeling, and analytical experiment design",
